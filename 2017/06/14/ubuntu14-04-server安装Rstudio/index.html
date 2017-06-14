@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="tags," />
+  <meta name="keywords" content="ubuntu," />
 
 
 
@@ -93,17 +93,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta name="keywords" content="tags">
+<meta name="description" content="概况 安装Rstudio-server必须先配置好R环境; 配置好apt-get的源,本文选用清华大学的源; 安装Rstudio-server版本去官网下载;  配置好apt-get源编辑/etc/apt/sources.list添加如下内容,先备份文件. (默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释)  deb https://mirrors.tuna.tsin">
+<meta name="keywords" content="ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://sgr-smile2015.github.io/2017/06/13/hello-world/index.html">
+<meta property="og:title" content="ubuntu14.04 server安装Rstudio">
+<meta property="og:url" content="http://sgr-smile2015.github.io/2017/06/14/ubuntu14-04-server安装Rstudio/index.html">
 <meta property="og:site_name" content="Sgr-smile">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-06-13T07:34:19.095Z">
+<meta property="og:description" content="概况 安装Rstudio-server必须先配置好R环境; 配置好apt-get的源,本文选用清华大学的源; 安装Rstudio-server版本去官网下载;  配置好apt-get源编辑/etc/apt/sources.list添加如下内容,先备份文件. (默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释)  deb https://mirrors.tuna.tsin">
+<meta property="og:image" content="http://sgr-smile2015.github.io/img/1.jpg">
+<meta property="og:updated_time" content="2017-06-14T03:49:24.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="ubuntu14.04 server安装Rstudio">
+<meta name="twitter:description" content="概况 安装Rstudio-server必须先配置好R环境; 配置好apt-get的源,本文选用清华大学的源; 安装Rstudio-server版本去官网下载;  配置好apt-get源编辑/etc/apt/sources.list添加如下内容,先备份文件. (默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释)  deb https://mirrors.tuna.tsin">
+<meta name="twitter:image" content="http://sgr-smile2015.github.io/img/1.jpg">
 
 
 
@@ -131,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://sgr-smile2015.github.io/2017/06/13/hello-world/"/>
+  <link rel="canonical" href="http://sgr-smile2015.github.io/2017/06/14/ubuntu14-04-server安装Rstudio/"/>
 
 
 
 
 
-  <title>Hello World | Sgr-smile</title>
+  <title>ubuntu14.04 server安装Rstudio | Sgr-smile</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -257,7 +259,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://sgr-smile2015.github.io/2017/06/13/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://sgr-smile2015.github.io/2017/06/14/ubuntu14-04-server安装Rstudio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sgr-smile">
@@ -274,7 +276,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Hello World</h2>
+          <h2 class="post-title" itemprop="name headline">ubuntu14.04 server安装Rstudio</h2>
         
 
         <div class="post-meta">
@@ -286,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-13T15:34:19+08:00">
-                2017-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-14T10:14:49+08:00">
+                2017-06-14
               </time>
             
 
@@ -321,16 +323,33 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><ul>
+<li>安装Rstudio-server必须先配置好R环境;</li>
+<li>配置好apt-get的源,本文选用清华大学的源;</li>
+<li>安装Rstudio-server版本去官网下载;</li>
+</ul>
+<h3 id="配置好apt-get源"><a href="#配置好apt-get源" class="headerlink" title="配置好apt-get源"></a>配置好<em>apt-get</em>源</h3><p>编辑/etc/apt/sources.list添加如下内容,先备份文件.<br> (默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释)</p>
+<blockquote>
+<p>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> trusty main restricted universe multiverse<br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> trusty-updates main restricted universe multiverse<br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> trusty-backports main restricted universe multiverse<br>deb <a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu/" target="_blank" rel="external">https://mirrors.tuna.tsinghua.edu.cn/ubuntu/</a> trusty-security main restricted universe multiverse</p>
+</blockquote>
+<p><a href="https://mirrors4.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="external">ubuntu清华源</a></p>
+<h3 id="配置r-base下载源"><a href="#配置r-base下载源" class="headerlink" title="配置r-base下载源"></a>配置r-base下载源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo sh -c &apos;echo &quot;deb http://cran.rstudio.com/bin/linux/ubuntu trusty/&quot; &gt;&gt; /etc/apt/sources.list&apos;</div><div class="line">gpg --keyserver keyserver.ubuntu.com --recv-key E084DAB9</div><div class="line">gpg -a --export E084DAB9 | sudo apt-key add -</div></pre></td></tr></table></figure>
+<p>以上配置完成后,执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install r-base</div></pre></td></tr></table></figure></p>
+<p>下载r-base需要一段时间,下载的R版本为 <em>R version 3.4.0 (2017-04-21) – “You Stupid Darkness”</em></p>
+<h3 id="安装rstudio-server"><a href="#安装rstudio-server" class="headerlink" title="安装rstudio-server"></a>安装rstudio-server</h3><p>本文获取官网的下载包为<em>rstudio-server-1.0.143-amd64.deb</em><br>安装命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo dpkg -i rstudio-server-1.0.143-amd64.deb</div></pre></td></tr></table></figure></p>
+<p><a href="https://www.rstudio.com/" target="_blank" rel="external">rstudio官网</a></p>
+<p>rstudio-server默认的端口为<strong><em>8787</em></strong>,启动服务的命令为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rstudio-server start</div></pre></td></tr></table></figure></p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><p>安装后在重启rstudio-server出现如下错误:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> [rserver] ERROR Unexpected exception: locale::facet::_S_create_c_locale name not </div><div class="line">valid; LOGGED FROM: int main(int, char* const*) /home/ubuntu/rstudio/src/cpp/server/ServerMain.cpp:552</div></pre></td></tr></table></figure></p>
+<p>重启失败,这是由于本地的语言环境没有配置好<br>在运行<strong>locale</strong>会出现如下错误:</p>
+<blockquote>
+<p>locale: Cannot set LC_CTYPE to default locale: No such file or directory<br>locale: Cannot set LC_ALL to default locale: No such file or directory</p>
+</blockquote>
+<p>解决的方法就是安装中文环境:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get -y install language-pack-zh-hans</div><div class="line">sudo dpkg-reconfigure locales</div></pre></td></tr></table></figure></p>
+<p><img src="../../../../img/1.jpg" alt="  "></p>
+<blockquote>
+<p>出现上图表示配置成功!</p>
+</blockquote>
+<h3 id="end"><a href="#end" class="headerlink" title="end"></a>end</h3>
       
     </div>
 
@@ -359,7 +378,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tags/" rel="tag"># tags</a>
+            <a href="/tags/ubuntu/" rel="tag"># ubuntu</a>
           
         </div>
       
@@ -372,15 +391,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/13/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/14/ubuntu14-04-server安装Rstudio/" rel="prev" title="ubuntu14.04 server安装Rstudio">
-                ubuntu14.04 server安装Rstudio <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -520,7 +539,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概况"><span class="nav-number">1.</span> <span class="nav-text">概况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置好apt-get源"><span class="nav-number">2.</span> <span class="nav-text">配置好apt-get源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置r-base下载源"><span class="nav-number">3.</span> <span class="nav-text">配置r-base下载源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装rstudio-server"><span class="nav-number">4.</span> <span class="nav-text">安装rstudio-server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#end"><span class="nav-number">6.</span> <span class="nav-text">end</span></a></li></ol></div>
             
 
           </div>
