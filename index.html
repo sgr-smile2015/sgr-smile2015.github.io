@@ -345,6 +345,10 @@
 <li>在~/.atom/packages/markdown-themeable-pdf</li>
 <li>执行 npm install phantomjs-prebuild (必须在该文件下执行,不然找不到package.json这个文件)</li>
 </ul>
+<p>在使用markdown-scroll-sync时出现如下警告<br><img src="../../../../img/atom_text_editor.jpg" alt=" "><br>参考github源码上的评论,这貌似是个bug,而且已经修复了,但还是很多人提交issus,包括我<br>,有时候多看看人家提的issus答案就能得到解决的方法,毕竟人家的时间是很值钱的<br>具体解决方法<br><a href="https://github.com/tsaiid/markdown-scroll-sync/commit/c41206e184916c8ac66fd9d46138bdc578648e41" target="_blank" rel="external">github解决</a><br>其实很简单:</p>
+<blockquote>
+<p>~/.atom/packages/markdown-scroll-sync/lib这个目录下<br>修改utils.coffee文件,记得先备份<br>在文件的第12行,删除.shadowRoot字段<br>重启atom即可</p>
+</blockquote>
 
           
         
