@@ -470,6 +470,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -</div><div class="line">sudo sh -c &apos;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&apos;</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install jenkins</div></pre></td></tr></table></figure>
 <p>配置jenkins的主目录,在ubuntu14.04的配置文件在/etc/default/jenkins这个文件</p>
 <p>在配置好环境后,不做任何jenkins用户相关的配置,切换到jenkins用户时,文件夹显示跟普通文件<br>没有区别<br>配置好用户的环境:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">把可用用户的.bashrc和.profile文件拷贝到jenkins用户目录下.</div><div class="line">停止jenkins,sudo service jenkins stop</div><div class="line">usermod -d /data/jenkins -s /bin/bash jenkins</div></pre></td></tr></table></figure></p>
+<p>配置好jenkins后,上次docker镜像到本地仓库,出现登陆或者验证错误<br>pull镜像出现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">denied: requested access to the resource is denied</div></pre></td></tr></table></figure></p>
+<ul>
+<li>解决的方式是:切换成jenkins用户,使用docker login sgr0.docker.com(本地仓库的域名)</li>
+</ul>
 
           
         
